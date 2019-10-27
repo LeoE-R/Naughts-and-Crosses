@@ -1,12 +1,12 @@
-Date created
+DATE CREATED
 
 26.10.19
 
-Project Title
+PROJECT TITLE
 
 Naughts & Crosses
 
-Description
+DESCRIPTION
 
 A simple game of naughts and crosses to play against the computer. Player moves first and computer randomly selects moves.
 
@@ -19,7 +19,7 @@ Files used
 
 naughts_and_crosses.py
 
-Future Implementations
+FUTURE IMPLEMENTATIONS
 
 1) Counter choice; currently there is no choice in which counter the player uses, always 'X'
 2) An option to restart game at any time
