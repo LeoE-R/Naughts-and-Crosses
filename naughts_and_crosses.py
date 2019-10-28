@@ -136,7 +136,7 @@ def play():
         create_board()
         player_move()
         end_game()
-        if '-' not in board or tkr != 0:
+        if tkr != 0:
             break
         create_board()
         pc_move()
