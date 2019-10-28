@@ -77,6 +77,7 @@ def pc_move():
     else:
         board[8] = naught
 
+    mv_log.append(pc_move)
     options.remove(pc_move)
 
 def end_game():
