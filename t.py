@@ -8,10 +8,6 @@ options = ['tl','tm','tr',
           'ml', 'm','mr',
           'bl', 'bm', 'br']
 
-avlb_mvs = ['tl','tm','tr',
-          'ml', 'm','mr',
-          'bl', 'bm', 'br']
-
 cross = 'X'
 naught = '0'
 
@@ -30,7 +26,7 @@ def create_board():
 
 def player_move():
 
-    player_move = input('\nYour move! available moves:\n{}\n'.format(avlb_mvs))
+    player_move = input('\nYour move! available moves:\n{}\n'.format(options))
 
     while player_move not in options:
         player_move = input('Invalid move. Select again')
@@ -57,17 +53,12 @@ def player_move():
     else:
         board[8] = cross
     mv_log.append(player_move)
-    avlb_mvs.remove(player_move)
+    options.remove(player_move)
 
 def pc_move():
     print('\nPC move:\n')
-    while True:
-        pc_move = random.choice(options)
-        if pc_move in mv_log:
-            pc_move = random.choice(options)
-        else:
-            mv_log.append(pc_move)
-            break
+
+    pc_move = random.choice(options)
 
     if pc_move == 'tl':
         board[0] = naught
@@ -87,6 +78,8 @@ def pc_move():
         board[7] = naught
     else:
         board[8] = naught
+
+    options.remove(pc_move)
 
 def end_game():
     global tkr
