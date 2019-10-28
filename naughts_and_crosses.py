@@ -132,7 +132,7 @@ def end_game():
 
 def play():
 
-    while '-' in board and tkr == 0:
+    while tkr == 0:
         create_board()
         player_move()
         end_game()
