@@ -23,5 +23,5 @@ FUTURE IMPLEMENTATIONS
 
 1) Counter choice; currently there is no choice in which counter the player uses, always 'X'
 2) An option to restart game at any time
-3) Following implementation of a restart option, a score log will be implemented
+3) Following implementation of a restart option, a score log will be created
 4) An option to choose if player or computer goes first; currently the player always makes the first move
