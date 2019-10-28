@@ -13,8 +13,6 @@ naught = '0'
 
 print('\nxX0o NAUGHTS & CROSSES o0Xx')
 
-print('\nMoves list: {}\n'.format(options))
-
 mv_log = []
 
 tkr = 0
