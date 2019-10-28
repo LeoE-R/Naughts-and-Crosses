@@ -8,6 +8,10 @@ options = ['tl','tm','tr',
           'ml', 'm','mr',
           'bl', 'bm', 'br']
 
+avlb_mvs = ['tl','tm','tr',
+          'ml', 'm','mr',
+          'bl', 'bm', 'br']
+
 cross = 'X'
 naught = '0'
 
@@ -26,7 +30,7 @@ def create_board():
 
 def player_move():
 
-    player_move = input('\nYour move!\n')
+    player_move = input('\nYour move! available moves:\n{}\n'.format(avlb_mvs))
 
     while player_move not in options:
         player_move = input('Invalid move. Select again')
@@ -53,6 +57,7 @@ def player_move():
     else:
         board[8] = cross
     mv_log.append(player_move)
+    avlb_mvs.remove(player_move)
 
 def pc_move():
     print('\nPC move:\n')
