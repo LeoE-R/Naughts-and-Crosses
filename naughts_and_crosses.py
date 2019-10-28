@@ -89,11 +89,11 @@ def end_game():
         tkr += 1
     elif board[6:9] == ['X', 'X', 'X']:
         tkr += 1
-    elif board[2:9:3] == ['X', 'X', 'X']:
-        tkr += 1
-    elif board[2:9:2] == ['X', 'X', 'X']:
+    elif board[0:7:3] == ['X', 'X', 'X']:
         tkr += 1
     elif board[1:8:3] == ['X', 'X', 'X']:
+        tkr += 1
+    elif board[2:9:3] == ['X', 'X', 'X']:
         tkr += 1
     elif board[2:7:2] == ['X', 'X', 'X']:
         tkr += 1
@@ -105,15 +105,15 @@ def end_game():
         tkr += 2
     elif board[6:9] == ['0', '0', '0']:
         tkr += 2
-    elif board[2:9:3] == ['0', '0', '0']:
+    elif board[0:7:3] == ['0', '0', '0']:
         tkr += 2
-    elif board[2:8:3] == ['0', '0', '0']:
+    elif board[1:8:3] == ['0', '0', '0']:
+        tkr += 2
+    elif board[2:9:3] == ['0', '0', '0']:
         tkr += 2
     elif board[2:7:2] == ['0', '0', '0']:
         tkr += 2
     elif board[0:9:4] == ['0', '0', '0']:
-        tkr += 2
-    elif board[2:9:2] == ['0', '0', '0']:
         tkr += 2
     elif '-' not in board:
         tkr = 3
