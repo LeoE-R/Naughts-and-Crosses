@@ -15,7 +15,7 @@ m: middle, mr: middle right, bl: bottom left, bm: bottom middle, br: bottom righ
 
 Once the game comes to an end, a message appears to denote player win, PC win or draw.
 
-Files used
+FILES USED
 
 naughts_and_crosses.py
 
