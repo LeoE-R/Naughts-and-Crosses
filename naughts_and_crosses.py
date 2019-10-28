@@ -11,16 +11,9 @@ options = ['tl','tm','tr',
 cross = 'X'
 naught = '0'
 
-x = []
-for option in options:
-    if x == []:
-        x.append(option)
-    else:
-        x.append(option)
-
 print('\nxX0o NAUGHTS & CROSSES o0Xx')
 
-print('\nMoves list: tl, tm, tr, ml, m, mr, bl, bm, br\n')
+print('\nMoves list: {}\n'.format(options))
 
 mv_log = []
 
@@ -35,7 +28,7 @@ def player_move():
 
     player_move = input('\nYour move!\n')
 
-    while player_move not in x:
+    while player_move not in options:
         player_move = input('Invalid move. Select again')
 
     while player_move in mv_log:
@@ -64,9 +57,9 @@ def player_move():
 def pc_move():
     print('\nPC move:\n')
     while True:
-        pc_move = random.choice(x)
+        pc_move = random.choice(options)
         if pc_move in mv_log:
-            pc_move = random.choice(x)
+            pc_move = random.choice(options)
         else:
             mv_log.append(pc_move)
             break
@@ -153,5 +146,11 @@ def play():
     else:
         create_board()
         print('\nDRAW! :^/')
+
+    restart = input('Play again? Y?N').lower()
+    if restart == 'y':
+        refresh_board()
+    else:
+        'Goodbye'
 
 play()
