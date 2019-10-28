@@ -147,10 +147,4 @@ def play():
         create_board()
         print('\nDRAW! :^/')
 
-    restart = input('Play again? Y?N').lower()
-    if restart == 'y':
-        refresh_board()
-    else:
-        'Goodbye'
-
 play()
