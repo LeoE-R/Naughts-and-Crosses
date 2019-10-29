@@ -18,7 +18,3 @@ Once the game comes to an end, a message appears to denote player win, PC win or
 FILES USED
 
 naughts_and_crosses.py
-
-FUTURE IMPLEMENTATIONS
-
-1) An option to choose if player or computer goes first; currently the player always makes the first move
