@@ -10,7 +10,7 @@ options = ['tl','tm','tr',
 
 counters = ['0', 'X']
 
-first_move = ['y', 'n']
+first = ['y', 'n']
 
 player_counter = ''
 pc_counter = ''
@@ -189,7 +189,7 @@ def refresh_board():
 def play():
     choose_counter()
     first_move = input('Would you like to go first? Y/N').lower()
-    while first_move not in first_move:
+    while first_move not in first:
         first_move = input('Invalid selection, please select \'y\' or \'n\'')
 
     if first_move == 'y':
