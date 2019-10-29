@@ -8,7 +8,7 @@ Naughts & Crosses
 
 DESCRIPTION
 
-A simple game of naughts and crosses to play against the computer. Player moves first and computer randomly selects moves.
+A game of naughts and crosses to play against the computer. Player moves first and computer randomly selects moves.
 
 controls - tl: top right, tm: top middle, tr: top right, ml: middle left,
 m: middle, mr: middle right, bl: bottom left, bm: bottom middle, br: bottom right
