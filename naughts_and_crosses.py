@@ -17,6 +17,10 @@ mv_log = []
 
 tkr = 0
 
+pc = 0
+player = 0
+draw = 0
+
 def create_board():
     print('|' + board[0] + '|' + board[1] + '|' + board[2] + '|')
     print('|' + board[3] + '|' + board[4] + '|' + board[5] + '|')
@@ -82,41 +86,61 @@ def pc_move():
 
 def end_game():
     global tkr
+    global player
+    global pc
+    global draw
 
     if board[0:3] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[3:6] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[6:9] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[0:7:3] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[1:8:3] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[2:9:3] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[2:7:2] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[0:9:4] == ['X', 'X', 'X']:
         tkr += 1
+        player += 1
     elif board[0:3] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif board[3:6] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif board[6:9] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif board[0:7:3] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif board[1:8:3] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif board[2:9:3] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif board[2:7:2] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif board[0:9:4] == ['0', '0', '0']:
         tkr += 2
+        pc += 1
     elif '-' not in board:
         tkr = 3
+        draw += 1
     else:
         tkr = 0
 
@@ -164,6 +188,8 @@ def play():
     else:
         create_board()
         print('\nDRAW! :^/')
+
+    print('SCOREBOARD: - Player:{} PC:{} Draw:{}'.format(player, pc, draw))
 
     while True:
         restart = input('Play again? y/n\n').lower()
