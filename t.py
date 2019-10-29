@@ -27,10 +27,10 @@ def player_move():
     player_move = input('\nYour move! available moves:\n{}\n'.format(options))
 
     while player_move not in options:
-        player_move = input('Invalid move. Select again')
+        player_move = input('Invalid move. Select again\n')
 
     while player_move in mv_log:
-        player_move = input('Move already made. Select again')
+        player_move = input('Move already made. Select one of the following\n')
 
     if player_move == 'tl':
         board[0] = cross
@@ -120,6 +120,27 @@ def end_game():
     else:
         tkr = 0
 
+def refresh_board():
+
+    global tkr
+
+    tkr = 0
+
+    global board
+
+    board = ['-','-','-',
+            '-','-','-',
+            '-','-','-']
+
+    global options
+
+    options = ['tl','tm','tr',
+              'ml', 'm','mr',
+              'bl', 'bm', 'br']
+
+    global mv_log
+    mv_log = []
+
 def play():
 
     while tkr == 0:
@@ -143,5 +164,13 @@ def play():
     else:
         create_board()
         print('\nDRAW! :^/')
+
+    while True:
+        restart = input('Play again? y/n\n').lower()
+        if restart == 'y':
+            refresh_board()
+            play()
+        else:
+            break
 
 play()
