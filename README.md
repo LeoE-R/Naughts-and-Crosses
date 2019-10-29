@@ -22,5 +22,4 @@ naughts_and_crosses.py
 FUTURE IMPLEMENTATIONS
 
 1) Counter choice; currently there is no choice in which counter the player uses, always 'X'
-2) A score log will be created
-3) An option to choose if player or computer goes first; currently the player always makes the first move
+2) An option to choose if player or computer goes first; currently the player always makes the first move
