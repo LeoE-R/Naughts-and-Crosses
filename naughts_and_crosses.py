@@ -205,7 +205,7 @@ def play():
     else:
         while tkr == 0:
             create_board()
-            pc_move()
+            pc_move(pc_counter)
             end_game()
             if tkr != 0:
                 break
